@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="cs">
+  <head>    
+    <meta charset="utf-8">
+    <title>Webové technologie</title>
+    <link rel="stylesheet" type="text/css" href="font-awesome-4.7.0.0\css\font-awesome.css">
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        max-width: 400px;
+        width: 100%;
+      }
+
+      @keyframes mojeAnimace {
+        0% {
+          background-color: red;
+        }
+        50% {
+          background-color: blue;
+          transform: scale(2);
+        }
+        100% {
+          background-color: green;
+        }
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: yellow;
+        margin: 55px;
+        padding: 5px;
+        transform: rotate(2);
+        animation-duration: 5s;
+        animation-name: mojeAnimace;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+      }
+
+      .box:hover {
+        text-align: center;
+        animation-play-state: paused;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box"></div>
+      <div class="box" id="box2"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
